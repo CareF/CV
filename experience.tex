@@ -1,0 +1,66 @@
+%!TEX program = xelatex
+%!TEX root = cv.tex
+% YAAC Another Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/yaac-another-awesome-cv
+%
+% Author:
+% Christophe Roger
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+% Render an experience in the experiences environment
+% Usage: 
+% \experienceentry
+%  {<Institude>} {<Title>}{<Department>}
+%  {<Time>}      {
+%                <Experience description (Could be a list)>
+%                }
+%                {<Technology list>}
+% \newcommand\experienceentry[6]{
+%   \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
+%   #4             & \begin{minipage}[t]{\rightcolumnlength}
+%                                #5
+%                    \end{minipage}										\\*
+%                  & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
+%   }
+
+%Section: Work Experience at the top
+% \sectionTitle{Profesional experience}{\faSuitcase}
+\sectionTitle{Profesional experience}{\faChalkboardTeacher}
+%\renewcommand{\labelitemi}{$\bullet$}
+\begin{experience}
+	\textbf{University of Waterloo} & \textbf{Research Assistant, 
+		\textsc{The Institute for Quantum Computing (IQC)}} \\*
+	07/2015 - 09/2015 & \begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item Advisor: Dr. Raymond Laflamme, Dr. Guanru Feng
+			\item Electron Spin Resonance implementation of Quantum Computing
+				and Simulation
+	    \end{itemize} 
+	\end{minipage}\\
+\emptySeparator
+	\textbf{Princeton University} & \textbf{Teaching Assistant,
+	    \textsc{School of Engineering and Applied Science}} \\*
+	2017 Fall & \begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item EGR 151: Foundations of Engineering: Mechanics, Energy, and
+				Waves
+				\begin{itemize}
+					\item General physics for engineering freshmen 
+					\item Lab sessions for physics and creative thinking 
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}\\
+	2018 Fall &\begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item ELE 308: Electronic and Photonic Devices
+				\begin{itemize}
+					\item Fabrication of Si-based devices like MOSFET, 
+						CMOS, PN junction, solar cells, etc.
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}\\
+\end{experience}

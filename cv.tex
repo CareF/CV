@@ -1,0 +1,38 @@
+%!TEX program = xelatex
+\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+\usepackage{xeCJK} % to get my Chinese name
+\setCJKmainfont{WenQuanYi Zen Hei Sharp}
+\name{Ming}{Lyu}
+\chinesename{吕铭}
+\tagline{PhD candidate, Electrical Engineering, Princeton University}
+\photo{3cm}{ming}
+\socialinfo{
+	% \linkedin{christopheroger}
+	\github{CareF}
+	\email{CareF.Lm@gmail.com}\\
+	\infos{Applied Physics, Optics, Photonics, Semiconductors, Computer Science}
+}
+
+\begin{document} 
+\makecvheader 
+\makecvfooter{\textsc{\today}} % \selectlanguage{english}\today
+		{\textsc{Ming Lyu (吕铭) - CV}}
+		{\thepage}
+\par{
+	I am a PhD student doing research on Quantum Cascade Laser, with physics
+	background and some experience of Quantum Information, Quantum Computing 
+	and Quantum Optics. I am interested in Computer Science and Technology
+	and familiar with high-tech development. 
+}
+	\input{education}
+	\input{publication}
+	% \input{awards}
+	\input{social}
+	\input{experience}
+	% \input{projects}
+	\input{skills}
+	% \input{languages}
+	% \input{references}
+
+
+\end{document}
