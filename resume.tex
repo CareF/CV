@@ -17,28 +17,43 @@ GitHub: \href{https://github.com/CareF}{CareF}}
 \begin{document}
 
 \section{Education}
-
-\rsub[Sept. 2016 - Expected 2021]{Princeton University}
+\rsub[Expected 2021]{Princeton University}
 Ph.D. in Electrical Engineering, Advisor: Dr. Claire Gmachl \\
-Research Field: Applied Physics, Optics and Quantum Devices
+Research Field: Applied Physics, Optics and Quantum Devices\\
+Additional courses: Numerical Algorithms; 
+Software Engineering for Scientific Computing 
 
-\rsub[Aug. 2012 - July 2016]{Tsinghua University}
+\rsub[July 2016]{Tsinghua University}
 B.S. in Physics, graduation with honors (GPA: 93.0/100, Rank: top 3/33)\\
 % \begin{itemize}
 %     \item Thesis ``Long Coherence Time Quantum Memory on Ion Trap System 
 %     with Dynamical Decoupling''
 % \end{itemize}
-Minor in Computer Science and Technology (GPA: 92.9/100)
-
+Minor in Computer Science and Technology (GPA: 92.9/100)\\
+\textbf{Awards:}
+2016 Chi-Sun Yeh Award (highest honor for physics undergraduate); 
+2016 Honored Graduate in Beijing; 
+2015 Outstanding Student Leader; 
+2013 -- 2016 Outstanding Student Scholarship
 
 \section{Research}
 \rsub[May 2017 -- present]{Longwave Infrared GaAs/AlGaAs Quantum Cascade Laser}
 PhD Research \hfill Princeton University
 \begin{itemize}
-    \item Improved the numerical simulation tool
+    \item Rewrote the numerical simulation tool:
+    \textbf{ErwinJr 2}
+    (\href{https://github.com/CareF/ErwinJr2}{\texttt{github.com/CareF/ErwinJr2}})
+\begin{itemize}
+    \item Implemented new eigen-solver and ODE solver, 
+    with OpenMP parallelization
+    \item Utilized PyQt and matplotlib for GUI
+    \item Designed the code structure with separation of 
+    different modules
+    % numerical calculation, material database and GUI
+    \item Doxygen and Sphinx documentation generator
+\end{itemize}\medskip
     \item Explored new algorithms with knowledge of semi-periodic system
-    \item Developed fabrication recipes for GaAs/AlGaAs material 
-    \item Designed measurement setups for longwave infrared light
+    \item Developed fabrication recipes and measurement setups 
 \end{itemize}\medskip
 
 \rsub[Oct. 2015 -- June 2016]{Long Coherence Time Quantum Memory on Ion Trap System}
@@ -58,23 +73,18 @@ Research Assistant \hfill University of Waterloo
 \rsub[Apr. 2014 -- June 2014]{Non-Markovian Dynamics of Open Quantum Systems}
 Undergraduate Research \hfill Tsinghua University
 
-\section{Project}
-\rsub[\href{https://github.com/CareF/ErwinJr2}{\texttt{github.com/CareF/ErwinJr2}}]{ErwinJr 2}
-A PyQt and matplotlib based GUI tool for quantum cascade laser simulation
-\begin{itemize}
-    \item New eigen-solver and ODE solver, with OpenMP parallelization
-    \item Structured design with separation of numerical calculation, 
-    material database and GUI
-    \item Doxygen and Sphinx documentation generator
-\end{itemize}\medskip
-
+\section{Other Projects}
 \rsub[\href{https://github.com/CareF/deepin-dock-plugin-neoweather}{\texttt{github.com/CareF/deepin-dock-plugin-neoweather}}]{NeoWeather}
 A weather plugin based on \texttt{OpenWeatherMap.org} API for Deepin Desktop Environment on Linux\medskip
 
 \rsub[2015 Spring]{AI for connect4 board game}
 Course project for ``Introduction for Artificial Intelligence''
 \begin{itemize}
-    \item Combination of Monte Carlo tree search and alpha–beta pruning
+    \item Implemented Monte Carlo tree search with adaptive sampling
+    \begin{itemize}
+        \item Modified with alpha–beta pruning and depth-first-search at 
+        the leaf node
+    \end{itemize}
     \item Beat 98\% of competitors
 \end{itemize}\medskip
 
@@ -141,9 +151,4 @@ Debate Team}
 Programming: Python, C, C++, Qt, Git, \LaTeX, OpenMP (basic), Bash (basic)\\
 Experiment: Cleanroom Fabrication, Nano-structure Imaging, 
 Infrared and Laser Optics
-
-\section{Selected Awards and Honors} 
-Chi-Sun Yeh Award (honored graduates in physics department), Tsinghua University \hfill 2016 \\
-Outstanding Student Leader, Tsinghua University \hfill 2015 \\
-Outstanding Student Scholarship, Tsinghua University \hfill 2013 -- 2016\\
 \end{document}
