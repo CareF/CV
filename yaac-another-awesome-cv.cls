@@ -242,7 +242,7 @@
 
 % Render a website link (optional)
 % Usage: \email{<email adress>}
-\newcommand*{\website}[2]{\sociallink{\faExternalLink}{#1}{#2}}
+\newcommand*{\website}[2]{\sociallink{\faExternalLinkAlt}{#1}{#2}}
 
 % Render author's mobile phone (optional)
 % Usage: \smartphone{<mobile phone number>}

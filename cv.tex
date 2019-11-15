@@ -24,14 +24,267 @@
 	and Quantum Optics. I am interested in Computer Science and Technology
 	and familiar with high-tech development. 
 }
-	\input{education}
-	\input{publication}
-	% \input{awards}
-	\input{social}
-	\input{experience}
-	% \input{projects}
-	\input{skills}
-	% \input{languages}
+
+
+% Render a scholarshipentry in the scolarship environment
+% Usage: 
+% \scholarshipentry
+%  {<Institude>}  {<Degree>}
+%  {<Date>}       {
+%                      <Experience description (Could be a list)>
+%                    }
+\newcommand\scholarshipentry[4]{
+   \textbf{#1} & \textbf{#2} \\*
+   #3          & \begin{minipage}[t]{\rightcolumnlength}
+                     #4
+                 \end{minipage}	\\}
+
+%Section: Scholarships and additional info
+\sectionTitle{Education}{\faGraduationCap}
+\begin{experience}
+	\scholarshipentry{Princeton University}{PhD in Electrical Engineering 
+	~~(GPA 3.891/4.0)}
+	{09/2016 - expected 2021}{
+		\begin{itemize}
+			\item Advisor: Dr. Claire Gmachl
+			\item Long wavelength Quantum Cascade Laser and GaAs/AlGaAs Photonic Devices
+		\end{itemize}
+	}
+	\emptySeparator
+	\scholarshipentry{Tsinghua University}{B.S. in Physics (GPA: 93.0/100, top 3/33), Minor in Computer Science (GPA 92.9/100)}
+	{08/2012 - 07/2016}{
+		\begin{itemize}
+			\item Thesis: ``\emph{Long Coherence Time Quantum Memory on 
+				Ion Trap System with Dynamical Decoupling}''
+				(Thesis Advisor: Dr. Kihwan Kim)
+			\item Graduate with hornor: 2016 ``Chi-Sun Yeh'' Award 
+			(highest honor for physics undergraduate),
+				2016 Beijing Outstanding Graduate, 
+				2013-2016 Outstanding Student Scholarship
+		\end{itemize} 
+	}
+	% \emptySeparator
+	% \scholarshipentry{University of Waterloo}{Research Assistant at 
+	% The Institute for Quantum Computing (IQC)}
+	% {07/2015 - 09/2015}{
+	%     \begin{itemize}
+	%         \item Advisor: Dr. Raymond Laflamme, Dr. Guanru Feng
+	%         \item Electron Spin Resonance implementation of Quantum Computing
+	%           and Simulation 
+	%     \end{itemize}
+	% }
+\end{experience}
+
+%Section: Publication list
+\newcommand\publication[3]{
+  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+    ``\textbf{#1}'', #2, #3
+  \end{minipage}
+  \\*
+}
+\sectionTitle{Publication}{\faBook}
+\publication{Design and Characterization of 14 – 20μm Wavelength GaAs/AlGaAs
+Quantum Cascade Lasers}{Infrared Terahertz Quantum Workshop (2019)}
+{\textbf{M. Lyu}, Loren Pfeiffer, Ken West, C. Gmachl}
+\publication{Design and Optimization of 14-20 μm Wacelength GaAs/AlGaAs 
+  Quantum Cascade Lasers}{4th International Workshop on Infrared
+  Technologies (2017)}{\textbf{M. Lyu}, C. Gmachl}
+\publication{Single-Qubit Quantum Memory Exceeding Ten-minute Coherence Time}
+  {Nature Photonics 11, 646-650 (2017)}{Y. Wang, M. Um, J. Zhang, S. An, 
+    \textbf{M. Lyu}, J.-N. Zhang, L.-M. Duan, D. Yum, K. Kim}
+\publication{Non-Markovian Dynamics of Open Quantum Systems without Rotating 
+  Wave Approximation}{Arxiv:1047.5359 (2014)}{M. Tang*, Y. Wu*, 
+  \textbf{M. Lyu}*, J. Tang, Z. Guo, T. Chen, X.-B. Wang 
+  (*equal contribution)}
+
+% \sectionTitle{Awards and Honors}{\faAward}
+% \shortexpentry{\textbf{``Chi-Sun Yeh'' Award} (highest honor for physics undergraduate), Tsinghua University}{2016}
+% \shortexpentry{\textbf{Outstanding Graduate} in Beijing}{2016}
+% \shortexpentry{\textbf{Outstanding Student Scholarship}, 
+% Tsinghua University}{2013-2016}
+% \shortexpentry{\textbf{Outstanding Student Leader}, Tsinghua
+% University}{2015}
+
+%Section: Social services
+\sectionTitle{Social Services and Activities}{\faUsers}
+\shortexpentry{\textbf{Vise-president}: Association of Chinese Students and Scholars at Princeton University (ACSSPU)}{03/2018 - 04/2019}
+\begin{minipage}{\linewidth}
+\begin{itemize}[leftmargin=2em]
+	\item Coordinated advertising and public relations
+	\item Built connection with student groups for unionization issue
+\end{itemize}
+\end{minipage}
+\shortexpentry{\textbf{President}: Student Association for Science and Technology, 
+Physics Department, Tsinghua University}{06/2015 - 07/2016}
+\begin{minipage}{\linewidth}
+\begin{itemize}[leftmargin=2em]
+	\item Led the update of the student-run server and department SNS 
+	website and FTP services
+	\item Organized student academic colloquium
+	\item Organized campus competition for China Undergraduate Physics Tournament
+\end{itemize}
+\end{minipage}
+\shortexpentry{\textbf{Founder and Team Leader}: the Student Debate Team in Physics Department, Tsinghua University}{09/2013 - 05/2016}
+\shortexpentry{\textbf{Vice-president}: Student Union, Physics Department, Tsinghua University}{09/2014 - 02/2015}
+\shortexpentry{\textbf{Chair of Student Life and Right}: Student Union, Physics Department, Tsinghua University}{09/2013 - 09/2014}
+\shortexpentry{\textbf{Outstanding Answerer} on Physics and Quantum Physics
+\sociallink{\faZhihu}{https://www.zhihu.com/people/CareF}{逸心}, with 16k followers}{}
+
+
+% Render an experience in the experiences environment
+% Usage: 
+% \experienceentry
+%  {<Institude>} {<Title>}{<Department>}
+%  {<Time>}      {
+%                <Experience description (Could be a list)>
+%                }
+%                {<Technology list>}
+% \newcommand\experienceentry[6]{
+%   \textbf{#1}    & \textbf{#2, \textsc{#3}}   								\\*
+%   #4             & \begin{minipage}[t]{\rightcolumnlength}
+%                                #5
+%                    \end{minipage}										\\*
+%                  & \footnotesize{\foreach \n in {#6}{\cvtag{\n}}} 	\\
+%   }
+
+%Section: Work Experience at the top
+% \sectionTitle{Profesional experience}{\faSuitcase}
+\sectionTitle{Profesional experience}{\faChalkboardTeacher}
+%\renewcommand{\labelitemi}{$\bullet$}
+\begin{experience}
+	\textbf{University of Waterloo} & \textbf{Research Assistant, 
+		\textsc{The Institute for Quantum Computing (IQC)}} \\*
+	07/2015 - 09/2015 & \begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item Advisor: Dr. Raymond Laflamme, Dr. Guanru Feng
+			\item Electron Spin Resonance implementation of Quantum Computing
+				and Simulation
+	    \end{itemize} 
+	\end{minipage}\\
+\emptySeparator
+	\textbf{Princeton University} & \textbf{Teaching Assistant,
+	    \textsc{School of Engineering and Applied Science}} \\*
+	2019 Spring &\begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item ELE 351: Electromagnetic Field Theory and Physical Optics
+				\begin{itemize}
+					\item Prepared and helped students with numerical simulation tools for Maxwell equations
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}\\
+	2018 Fall &\begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item ELE 308: Electronic and Photonic Devices
+				\begin{itemize}
+					\item Fabrication of Si-based devices like MOSFET, 
+						CMOS, PN junction, solar cells, etc.
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}\\
+	2017 Fall & \begin{minipage}[t]{\rightcolumnlength}
+		\begin{itemize}
+			\item EGR 151: Foundations of Engineering: Mechanics, Energy, and
+				Waves
+				\begin{itemize}
+					\item General physics for engineering freshmen 
+					\item Lab sessions for physics and creative thinking 
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}
+\end{experience}
+
+% Define the 'project' entry in the 'projects' environment
+% Usage:
+% \project
+%   {<Project name>}{<dates>}
+%   {<link1> <link2>}
+%   {<Project description>}
+%   {<techno1>,<techno2>}
+\newcommand\project[5]{
+  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
+    \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
+    #3\\
+    #4\smallskip\\
+    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
+  \end{minipage}
+  \\*
+}
+%Section: Project
+\sectionTitle{Projects}{\faLaptop}
+	\project
+	{ErwinJr2}{2017 - present}
+	{\github{CareF/ErwinJr2}}
+	{A quantum cascade laser numerical simulation software, with GUI and data visualization. The computational intense part is coded by C and integrated into Python. New eigen-solver with knowledge of semi-periodical structure was implemented, optimized with OpenMP parallelization.}{Python, C, Qt, OpenMP, matplotlib, doxygen, sphinx, continuous integration}
+	\project{NeoWeather}{2018 - present}
+	{\github{CareF/deepin-dock-plugin-neoweather}}
+	{A weather plugin based on \texttt{OpenWeatherMap.org} API for 
+	Deepin Desktop Environment on Linux}
+	{C++, Qt, Linux, RESTful API}
+	\project{AI for connect4 board game}{2015 Spring}
+	{Course project for ``introduction for Artificial Intelligence''}
+	{Implemented Monte Carlo tree search with adaptive sampling, and 
+	modified the algorithm with alpha-beta prunning and depth-first-search 
+	at the leaf node. The result beat 98\% competitors.}
+	{C++, Monte Carlo Tree search}
+	\project{SomePhys: a simple physics engine}{2015 Autumn}
+	{Joint course project for ``Fundamentals of Computer Aided Design'' 
+	and ``Software Engineering''}
+	{Implemented Newtonian mechanics simulator and OpenGL rendering. 
+	Created demos for chaotic phenomenon.}
+	{C++, OpenGL, Qt}
+
+
+%Section Skills
+\newcommand\keywordsentry[2]{
+  \textbf{#1} &   #2\\ 
+}
+\sectionTitle{Skills}{\faTasks}
+{
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{>{}r>{}p{13cm}} 
+	\keywordsentry{Languages}{Chinese (native), English (fluent)}
+	\keywordsentry{Programing}{Python, C, C++, Qt, Git, \LaTeX{}, OpenMP (basic), Bash (basic)}
+	\keywordsentry{Experiment}{Cleanroom Fabrication, Nano-structure Imaging, Infrared and Laser Optics}
+\end{tabular}
+
+\newenvironment{skills}{%
+  \begin{longtable}{R{\leftcolumn}p{\rightcolumnlength}}
+}{%
+  \end{longtable}
+}
+
+\newcommand*\twocolumnsection[2]{
+  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+    #1
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{\dimexpr(\linewidth/2) - 3em}
+    #2
+  \end{minipage}
+  }
+
+% Render a skill in the skills environment
+% Usage: \skill{<skill>}{<level>}
+% \newcommand\skill[2]{
+%   \textbf{#1}    & \foreach \x in {1,...,5}{{\color{accentcolor!80}
+%   \ifnumgreater{\x}{#2}{\faCircle[regular]}{\faCircle}}\enspace } \\
+% }
+
+% % %Section: Languages
+% \twocolumnsection
+% {\sectionTitle{Languages}{\faGlobeAsia}
+% \begin{skills}
+% 	\skill{Chinese}{5}
+% 	\skill{English}{4}
+% \end{skills}}
+% {\sectionTitle{Strength}{\faUserPlus}
+% \vspace{1em}
+% \begin{itemize}
+% 	\item Responsible
+% 	\item Open-minded                    
+%     \item Fast-learner
+% \end{itemize}
+% }
 	% \input{references}
 
 

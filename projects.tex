@@ -10,29 +10,3 @@
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-
-% Define the 'project' entry in the 'projects' environment
-% Usage:
-% \project
-%   {<Project name>}{<dates>}
-%   {<link1> <link2>}
-%   {<Project description>}
-%   {<techno1>,<techno2>}
-\newcommand\project[5]{
-  \begin{minipage}[t]{\dimexpr(\linewidth) - 1.5em}
-    \textbf{\textsc{#1}} \hfill \textsc{#2}\smallskip\\
-    #3\\
-    #4\smallskip\\
-    \footnotesize{\foreach \n in {#5}{\cvtag{\n}}}\\
-  \end{minipage}
-  \\*
-}
-
-
-%Section: Project
-\sectionTitle{Projects}{\faLaptop}
-	\project
-	{Live a life}{1994 - present}
-	{\website{http://www.caref.xyz}{http://www.caref.xyz}}
-	{Simply City est une application mobile, gratuite et participative destinée à tous les habitants, visiteurs et touristes qui séjournent dans une ville. L’application permet de connaître toutes les informations et services utiles en temps réel.}
-	{alive, cell division, metabolism }
